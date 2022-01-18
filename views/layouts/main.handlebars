@@ -1,0 +1,122 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- this is the embeded font "aktiv-grotesk" from typekit -->
+        <link rel="stylesheet" href="https://use.typekit.net/oye2svd.css" />
+
+        <!-- this is the embeded font "eczar" from google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/styling/main.style.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/images/petition-project_favicon-light-scheme.png"
+            media="(prefers-color-scheme:light)"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/images/petition-project_favicon-dark-scheme.png"
+            media="(prefers-color-scheme:dark)"
+        />
+        <title>design bootcamp</title>
+
+    </head>
+
+    <body>
+
+        <nav>
+
+            <div class="left">
+                <a href="/about">
+                    <img
+                        id="logo-db"
+                        src="/images/petition-project_logo-db.svg"
+                        alt="logo-db"
+                    /></a>
+
+                <a class="underlined" href="/petition">petition</a>
+                <a class="underlined" href="/signers">signers</a>
+            </div>
+
+            <div class="right">
+
+                {{#unless session.userId}}
+                    <a class="underlined" href="/register">register</a>
+                    <a id="register" href="/register">
+                        <img
+                            src="/images/petition-project_icon-register.svg"
+                            alt="icon-register"
+                        /></a>
+                    <a class="underlined" href="/login">login</a>
+                    <a id="login" href="/login">
+                        <img
+                            src="/images/petition-project_icon-login.svg"
+                            alt="icon-login"
+                        /></a>
+                {{/unless}}
+
+                {{#if session.userId}}
+                    <a class="underlined" href="/profile/edit">edit profile</a>
+                    <a class="icon-profile" href="/profile/edit">
+                        <img
+                            class="icon-profile"
+                            src="/images/petition-project_icon-profile.svg"
+                            alt="icon-profile"
+                        /></a>
+
+                    <form method="POST" action="/logout">
+                        <button id="logout" type="submit">
+                            <a>logout</a>
+                            <a class="icon-logout">
+                                <img
+                                    class="icon-logout"
+                                    src="/images/petition-project_icon-logout.svg"
+                                    alt="icon-logout"
+                                /></a></button>
+
+                    </form>
+
+                {{/if}}
+
+            </div>
+
+        </nav>
+
+        <div class="main-div">
+
+            {{! this block will be filled by the content from the individual handlebar templates }}
+            {{{body}}}
+        </div>
+
+        <footer>
+            <div class="left">
+                ©
+                {{currentDate}}
+                | made by Michèle Rietzl with
+                <img
+                    class="icon-heart"
+                    src="/images/petition-project_icon-heart.svg"
+                    alt="icon-heart"
+                />
+                for design.
+            </div>
+            <div class="right">
+                <a class="underlined" href="/faq">faq</a>
+                <a class="underlined" href="/imprint">imprint</a>
+            </div>
+        </footer>
+
+        <script src="/scrips.js"></script>
+    </body>
+
+</html>

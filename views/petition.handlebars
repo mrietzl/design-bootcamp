@@ -1,0 +1,54 @@
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/petition.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>Sign for the petition and be one of the first students at the
+                design bootcamp!</h2>
+
+            <section class="form">
+                <form method="POST" action="/petition">
+                    <p>We are happy that you want to vote for our petition being
+                        one of the first students to participate in the design
+                        bootcamp. You can add your signature here:</p>
+                    <input id="signature" name="signature" type="hidden" />
+                    <canvas id="canvas" height="100" width="300"></canvas>
+
+                    <button class="button-no-1" type="submit">submit</button>
+                </form>
+            </section>
+
+            {{#if error}}
+
+                <div class="error">
+                    <p>Oh no, something went wrong. Please try it again.</p>
+                </div>
+
+            {{/if}}
+
+            <h3>You have more questions before you want to sign?</h3>
+
+            <p class="teaser">
+                Visit our faq section where you will read everything you need to
+                know about the online petition for the design bootcamp.
+            </p>
+
+            <form id="faq-section" method="POST" action="/faq">
+                <button class="button-no-2" type="submit">read more
+                    <img
+                        class="icon-arrow-darkblue"
+                        src="/images/petition-project_icon-arrow-darkblue.svg"
+                        alt="icon-arrow-darkblue"
+                    /></button>
+            </form>
+
+        </div>
+
+    </body>
+
+</html>

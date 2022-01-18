@@ -1,0 +1,79 @@
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/signers.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>List of all the signers
+            </h2>
+
+            <p>
+                Here you see a list of all the
+                <b>{{count}}
+                    people</b>
+                who have already signed for the petition. You can also check out
+                where they from or visit their homepage. Additionally, you can
+                get a list of the persons who have signed and live in the same
+                city by clicking on the city names.
+            </p>
+
+        </div>
+
+        <section>
+
+            <table>
+                <tr>
+                    <th>Last name</th>
+                    <th>First name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Homepage</th>
+                </tr>
+                {{#each signers}}
+                    <tr>
+                        <td>{{last}}</td>
+                        <td>{{first}}</td>
+                        <td>{{age}}</td>
+                        <td><a
+                                class="signers-link"
+                                href="/signers/{{city}}"
+                            >{{city}}
+                                {{#if city}}
+                                    <img
+                                        class="icon-arrow-darkblue-small"
+                                        src="/images/petition-project_icon-arrow-darkblue-small.svg"
+                                        alt="icon-arrow-darkblue-small"
+                                    />
+                                {{/if}}
+                            </a></td>
+                        <td>
+
+                            {{#if url}}
+                                View
+                                <a
+                                    class="signers-link"
+                                    href="{{url}}"
+                                    target="_blank"
+                                >{{first}}'s Website
+                                    <img
+                                        class="icon-arrow-darkblue-small"
+                                        src="/images/petition-project_icon-arrow-darkblue-links.svg"
+                                        alt="icon-arrow-darkblue-small"
+                                    />
+                                </a>
+                            {{/if}}
+
+                        </td>
+                    </tr>
+                {{/each}}
+            </table>
+
+        </section>
+
+    </body>
+
+</html>

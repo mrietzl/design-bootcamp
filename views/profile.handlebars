@@ -1,0 +1,49 @@
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/profile.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>Tell us just a little bit more about yourself.</h2>
+
+            <section id="profile-form">
+                <form method="POST" action="/profile">
+                    <input
+                        id="age"
+                        placeholder="age"
+                        name="age"
+                        type="number"
+                    />
+                    <input
+                        id="city"
+                        placeholder="city"
+                        name="city"
+                        type="text"
+                    />
+                    <input
+                        id="homepage"
+                        placeholder="homepage"
+                        name="url"
+                        type="text"
+                    />
+                    <button class="button-no-1" type="submit">continue</button>
+                </form>
+            </section>
+
+            {{#if error}}
+
+                <div class="error">
+                    <p>Oh no, something went wrong. Please try it again.</p>
+                </div>
+
+            {{/if}}
+
+        </div>
+
+    </body>
+
+</html>

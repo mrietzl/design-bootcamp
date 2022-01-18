@@ -1,0 +1,46 @@
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/thanks.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>Great, you have already signed.</h2>
+
+            <p>Great to know that you are interested in our design bootcamp.
+                Thank you for signing the petition! Until we know more about the
+                further process and when a possible bootcamp will take place,
+                you can check out the list of signers who already signed for the
+                bootcamp.</p>
+
+            <img id="signature-img" src="{{signature}}" alt="your signature" />
+
+        </div>
+
+        <form method="POST" action="/signers">
+            <button class="button-no-1" type="signers">see the list of signers
+                <img
+                    class="icon-arrow-lightblue"
+                    src="/images/petition-project_icon-arrow-lightblue.svg"
+                    alt="icon-arrow-lightblue"
+                /></button>
+        </form>
+
+        <form id="delete-form" method="POST" action="/delete/signature">
+            <button class="button-no-2" type="submit">delete signature</button>
+        </form>
+
+        {{#if error}}
+
+            <div class="error">
+                <p>Oh no, something went wrong. Please try it again.</p>
+            </div>
+
+        {{/if}}
+
+    </body>
+
+</html>

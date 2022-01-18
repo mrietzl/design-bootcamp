@@ -1,0 +1,48 @@
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/login.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>Please log in to access your profile.</h2>
+
+            <p>If you are already registered as user on our voting platform, you
+                can easily get access to your existing profile by logging in
+                with your data.</p>
+
+            <section id="login-form">
+                <form method="POST" action="/login">
+                    <input
+                        id="email"
+                        placeholder="email adress *"
+                        name="email"
+                        type="text"
+                    />
+                    <input
+                        id="password"
+                        placeholder="password *"
+                        name="password"
+                        type="password"
+                    />
+                    <p class="mandatory">* mandatory fields</p>
+                    <button class="button-no-1" type="submit">login</button>
+                </form>
+            </section>
+
+            {{#if error}}
+
+                <div class="error">
+                    <p>Oh no, something went wrong. Please try it again.</p>
+                </div>
+
+            {{/if}}
+
+        </div>
+
+    </body>
+
+</html>

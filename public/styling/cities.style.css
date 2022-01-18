@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+    margin: 50px;
+}
+
+th,
+td {
+    border: 1px solid #1c404c;
+    padding: 12.5px 25px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #d7d7d9;
+    font-weight: 700;
+}
+
+.signers-link {
+    text-decoration: underline;
+}

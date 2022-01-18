@@ -1,0 +1,272 @@
+/* how to sort the content in between the selectors:
+
+try 1:
+0. box-relevant specifications (border-style, box-shadow, box-sizing etc.)
+1. background (background-color etc.)
+2. spacing (link the box modell: margin, border, padding)
+3. size (height, width)
+4. alignment (flexbox etc.)
+5. font specifications (color, font-family, font-style etc.)
+-> in between these categories the alignments will be ordered alphabetically;
+-> EXEPTION 1: the box modell goes from the outside to the inside;
+-> EXEPTION 2: the flexbox modell (display, flex-direction, justify-…, align-… ) 
+
+try 2:
+alphabetical order */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    align-items: center;
+    background-color: #e3e4e8;
+    color: #1c404c;
+    display: flex;
+    flex-direction: column;
+    font-family: "aktiv-grotesk";
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.on {
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #e3e4e8;
+    /* shadow on the nav bar: https://www.mediaevent.de/css/box-shadow.html */
+    box-shadow: 0px 2px 7px silver;
+    display: flex;
+    font-weight: 700;
+    position: fixed;
+    text-decoration: none;
+}
+
+nav a,
+footer a {
+    margin: 0 20px;
+}
+
+footer a {
+    color: #e3e4e8;
+}
+
+.icon-profile {
+    margin-left: 0;
+}
+
+.icon-logout {
+    margin-left: 0;
+}
+
+#logout {
+    background-color: #e3e4e8;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+#login,
+#register {
+    margin-left: 0px;
+}
+
+.icon-heart {
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #1c404c;
+    color: #e3e4e8;
+    font-weight: 400;
+}
+
+/* this specification had to be made AFTER the nav and footer assignments! */
+nav,
+footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+a {
+    color: #1c404c;
+    text-decoration: none;
+}
+
+.button-no-1,
+.button-no-2 {
+    border: #1c404c 2px solid;
+    border-radius: 50px;
+    font-family: "aktiv-grotesk";
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+.button-no-1 {
+    background-color: #1c404c;
+    color: #e3e4e8;
+}
+
+.button-no-2 {
+    background-color: #e3e4e8;
+    color: #1c404c;
+    margin-bottom: 50px;
+}
+
+.teaser {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 25px;
+}
+
+.mandatory {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+}
+
+.error p {
+    align-self: center;
+    color: #86181b;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+.right,
+.left {
+    align-items: center;
+    display: flex;
+}
+
+.main-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+    padding-top: 125px;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Eczar";
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: "Eczar";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    padding: 25px;
+}
+
+h3 {
+    font-family: "aktiv-grotesk";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 50 0 12.5 0;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* source: https://www.w3schools.com/cssref/sel_placeholder.asp */
+input::placeholder {
+    color: #8e8e8e;
+}
+
+input::-webkit-input-placeholder {
+    /* Edge */
+    color: #8e8e8e;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #8e8e8e;
+}
+
+input,
+button {
+    margin: 10px;
+}
+
+input {
+    background-color: #e3e4e8;
+    border: none;
+    border-bottom: 2px solid #1c404c;
+    color: #1c404c;
+    font-size: 18px;
+    text-align: center;
+    width: 300px;
+}
+
+input:focus-visible {
+    background-color: #e3e4e8;
+    color: #1c404c;
+    outline: none;
+}
+
+/* look again: https://developer.mozilla.org/de/docs/Web/CSS/:autofill
+
+input:-webkit-autofill {
+    background-color: #e3e4e8;
+    color: #1c404c;
+    outline: none;
+} */
+
+button {
+    align-items: center;
+    display: flex;
+}
+
+button:hover {
+    padding: 9px 40px;
+    transition: width 0.2s ease-out;
+}
+
+.icon-arrow-lightblue,
+.icon-arrow-darkblue {
+    margin-left: 9px;
+}
+
+a,
+button {
+    cursor: cell;
+    /* look for more css cursor and pointer styling: https://www.mediaevent.de/css/userinterface.html */
+}

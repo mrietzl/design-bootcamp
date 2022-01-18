@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.5" height="12.5" viewBox="0 0 12.5 12.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1c404c;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="icons">
+    <polyline class="cls-1" points="3.75 1.25 8.75 6.25 3.75 11.25"/>
+  </g>
+</svg>

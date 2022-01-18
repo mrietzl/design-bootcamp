@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1c404c;
+      }
+    </style>
+  </defs>
+  <g id="icons">
+    <polygon class="cls-1" points="2.94 2.41 2.94 3.91 11.03 3.91 2.41 12.53 3.47 13.59 12.09 4.97 12.09 13.06 13.59 13.06 13.59 2.41 2.94 2.41"/>
+  </g>
+</svg>

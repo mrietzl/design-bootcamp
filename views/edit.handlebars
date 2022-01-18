@@ -1,0 +1,85 @@
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/edit.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>You want to update your profile?</h2>
+
+            <p>Here you can edit your profile. You see an overview of your
+                currently saved data. For security reasons, the password is not
+                displayed. But you can change it at any time. By clicking the
+                update button your new input will be saved.</p>
+
+            <section id="profile-update-form">
+                <form method="POST" action="/profile/edit">
+                    <input
+                        id="first"
+                        value="{{first}}"
+                        placeholder="first name *"
+                        name="first"
+                        type="text"
+                    />
+                    <input
+                        id="last"
+                        value="{{last}}"
+                        placeholder="last name *"
+                        name="last"
+                        type="text"
+                    />
+                    <input
+                        id="email"
+                        value="{{email}}"
+                        placeholder="email address *"
+                        name="email"
+                        type="text"
+                    />
+                    <input
+                        id="password"
+                        placeholder="set new password"
+                        name="password"
+                        type="password"
+                    />
+                    <input
+                        id="age"
+                        value="{{age}}"
+                        placeholder="age"
+                        name="age"
+                        type="text"
+                    />
+                    <input
+                        id="city"
+                        value="{{city}}"
+                        placeholder="city"
+                        name="city"
+                        type="text"
+                    />
+                    <input
+                        id="homepage"
+                        value="{{url}}"
+                        placeholder="homepage"
+                        name="url"
+                        type="text"
+                    />
+                    <p class="mandatory">* mandatory fields</p>
+                    <button class="button-no-1" type="submit">update</button>
+                </form>
+            </section>
+
+            {{#if error}}
+
+                <div class="error">
+                    <p>Oh no, something went wrong. Please try it again.</p>
+                </div>
+
+            {{/if}}
+
+        </div>
+
+    </body>
+
+</html>

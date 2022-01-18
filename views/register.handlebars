@@ -1,0 +1,78 @@
+{{! need to be adjusted
+ }}
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/register.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>Please register first to sign for the petition.</h2>
+
+            <p>As soon as you have registered, you can vote for the design
+                bootcamp and get full access to the subscribers list to see who
+                already signed.</p>
+
+            <section id="register-form">
+                <form method="POST" action="/register">
+                    <input
+                        id="first"
+                        placeholder="first name *"
+                        name="first"
+                        type="text"
+                    />
+                    <input
+                        id="last"
+                        placeholder="last name *"
+                        name="last"
+                        type="text"
+                    />
+                    <input
+                        id="email"
+                        placeholder="email adress *"
+                        name="email"
+                        type="text"
+                    />
+                    <input
+                        id="password"
+                        placeholder="password *"
+                        name="password"
+                        type="password"
+                    />
+                    <p class="mandatory">* mandatory fields</p>
+                    <button class="button-no-1" type="submit">register</button>
+                </form>
+            </section>
+
+            {{#if error}}
+
+                <div class="error">
+                    <p>Oh no, something went wrong. Please try it again.</p>
+                </div>
+
+            {{/if}}
+
+            <h3>You have an account?</h3>
+
+            <p class="teaser">
+                If you are already registered as a user, you can simply log in
+                with your data.
+            </p>
+
+            <form method="POST" action="/get/login">
+                <button class="button-no-2" type="submit">log in
+                    <img
+                        class="icon-arrow-darkblue"
+                        src="/images/petition-project_icon-arrow-darkblue.svg"
+                        alt="icon-arrow-darkblue"
+                    /></button>
+            </form>
+
+        </div>
+
+    </body>
+
+</html>

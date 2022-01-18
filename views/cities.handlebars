@@ -1,0 +1,68 @@
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/styling/cities.style.css" />
+    </head>
+
+    <body>
+
+        <div>
+
+            <h2>List of the signers from
+                {{city}}
+            </h2>
+
+            <p>
+                Here you see a list of all the
+                <b>{{count}}
+                    people from
+                    {{city}}</b>
+                who have already signed for the petition. By clicking on their
+                homepage – if given – you can check out more about them.
+            </p>
+
+        </div>
+
+        <section>
+
+            <table>
+                <tr>
+                    <th>Last name</th>
+                    <th>First name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Homepage</th>
+                </tr>
+                {{#each signers}}
+                    <tr>
+                        <td>{{last}}</td>
+                        <td>{{first}}</td>
+                        <td>{{age}}</td>
+                        <td>{{city}}</td>
+                        <td>
+
+                            {{#if url}}
+                                View
+                                <a
+                                    class="signers-link"
+                                    href="{{url}}"
+                                    target="_blank"
+                                >{{first}}'s Website
+                                    <img
+                                        class="icon-arrow-darkblue-small"
+                                        src="/images/petition-project_icon-arrow-darkblue-links.svg"
+                                        alt="icon-arrow-darkblue-small"
+                                    />
+                                </a>
+                            {{/if}}
+
+                        </td>
+                    </tr>
+                {{/each}}
+            </table>
+
+        </section>
+
+    </body>
+
+</html>
