@@ -29,15 +29,15 @@ The project was made at the [SPICED Academy](https://www.spiced-academy.com/de) 
 
 ## Technology
 
-<a href="https://code.visualstudio.com/" > <img src="web-development-visual-studio-code.png" height="75px" /></a>
-<a href="https://tc39.es/ecma262/" > <img src="web-development-js.png" height="75px" /></a>
-<a href="https://nodejs.org/en/" > <img src="web-development-node-js.png" height="75px" /></a>
-<a href="http://expressjs.com/" > <img src="web-development-express.png" height="75px" /></a>
-<a href="https://handlebarsjs.com/" > <img src="web-development-handlebars.png" height="75px" /></a>
-<a href="https://developer.mozilla.org/de/docs/Web/CSS" > <img src="web-development-css-3.png" height="75px" /></a>
-<a href="https://www.postgresql.org/" > <img src="web-development-PostgreSQL.png" height="75px" /></a>
-<a href="https://jestjs.io/" > <img src="web-development-jest-js.png" height="75px" /></a>
-<a href="https://www.heroku.com/" > <img src="web-development-heroku.png" height="75px" /></a>
+<a href="https://code.visualstudio.com/" > <img src="./assets/web-development-visual-studio-code.png" height="75px" /></a>
+<a href="https://tc39.es/ecma262/" > <img src="./assets/web-development-js.png" height="75px" /></a>
+<a href="https://nodejs.org/en/" > <img src="./assets/web-development-node-js.png" height="75px" /></a>
+<a href="http://expressjs.com/" > <img src="./assets/web-development-express.png" height="75px" /></a>
+<a href="https://handlebarsjs.com/" > <img src="./assets/web-development-handlebars.png" height="75px" /></a>
+<a href="https://developer.mozilla.org/de/docs/Web/CSS" > <img src="./assets/web-development-css-3.png" height="75px" /></a>
+<a href="https://www.postgresql.org/" > <img src="./assets/web-development-PostgreSQL.png" height="75px" /></a>
+<a href="https://jestjs.io/" > <img src="./assets/web-development-jest-js.png" height="75px" /></a>
+<a href="https://www.heroku.com/" > <img src="./assets/web-development-heroku.png" height="75px" /></a>
 
 ---
 
