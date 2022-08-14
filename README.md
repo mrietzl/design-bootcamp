@@ -67,7 +67,7 @@ The `/register` page renders a form to register for the online petition and crea
 
 When the users registers for the first time, he will be redirected to a `/profile` page where he can add additional information like age, city or homepage. Alle these fields are not mandatory and can be updated in the `/profile/edit` page again.
 
-![profile screen](/public/images/profile.png)
+![profile screen](/public/images/profile-edit.png)
 
 ---
 
